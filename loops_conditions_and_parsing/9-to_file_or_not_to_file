@@ -4,8 +4,8 @@ found=0
 for file in *; do
     if [ "$file" == "school" ]
 	then
-	let found=1
-	echo "school file exists"
+		((found=1)) || true
+		echo "school file exists"
 	if [ -s "$file" ]
 	    then
 	    echo "school file is not empty"
